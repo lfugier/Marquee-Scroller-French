@@ -32,7 +32,7 @@
 //Traduction Fr :
 //==> Marquee.ino : Trad Fr lignes 116 à 200 (interface Web)
 //==> Marquee.ino : modif code lignes 387 et 388 (Affichage Date au format Fr)
-//==> Marquee.ino : Trad Fr lignes 51,328,331,334,335,387,388,394,399,406,409,415,851,1003,1005,1027,1028,1061,1065,1205,1131,1142,1164,1165,1167,1168,1169
+//==> Marquee.ino : Trad Fr lignes 51,328,331,334,335,387,388,394,399,406,409,415,851,889,1003,1005,1027,1028,1061,1065,1205,1131,1142,1164,1165,1167,1168,1169
 //==> OpenWeatherMapClient.cpp  : Modif ligne 46 (Affichage conditions météo au Format Fr)
 //==> OpenWeatherMapClient.cpp  : Traduction Fr des messages d'erreur lignes 42,60,61,77,94,95,102 | Jour de la semaine lignes 298,302,304,307,310,313,316
 //==> NewsApiClient.cpp  : Traduction Fr des messages d'erreur lignes 47 et 87
