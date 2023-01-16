@@ -141,7 +141,7 @@ static const char CHANGE_FORM1[] PROGMEM = "<form class='w3-container' action='/
                       "<p><input name='showcondition' class='w3-check w3-margin-top' type='checkbox' %CONDITION_CHECKED%> Afficher les conditions météo</p>"
                       "<p><input name='showhumidity' class='w3-check w3-margin-top' type='checkbox' %HUMIDITY_CHECKED%> Afficher le taux d'humidité</p>"
                       "<p><input name='showwind' class='w3-check w3-margin-top' type='checkbox' %WIND_CHECKED%> Afficher le sens et la vitesse du vent</p>"
-                      "<p><input name='showpressure' class='w3-check w3-margin-top' type='checkbox' %PRESSURE_CHECKED%>Afficher la pression barométrique</p>"
+                      "<p><input name='showpressure' class='w3-check w3-margin-top' type='checkbox' %PRESSURE_CHECKED%> Afficher la pression barométrique</p>"
                       "<p><input name='is24hour' class='w3-check w3-margin-top' type='checkbox' %IS_24HOUR_CHECKED%> Utiliser l'horloge au format 24 heures</p>";
 
 static const char CHANGE_FORM2[] PROGMEM = "<p><input name='isPM' class='w3-check w3-margin-top' type='checkbox' %IS_PM_CHECKED%> Afficher l'indicateur PM (format 12h uniquement)</p>"
