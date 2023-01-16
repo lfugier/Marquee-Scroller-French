@@ -1165,7 +1165,7 @@ void configModeCallback (WiFiManager *myWiFiManager) {
   Serial.println("Veuillez vous connecter point d'accès");
   Serial.println(myWiFiManager->getConfigPortalSSID());
   Serial.println("Pour configurer votre horloge");
-  scrollMessage("Activez le wifi sur votre telephone et connectez-vous au point d'acces suivant pour y entrez votre cle wifi: " + String(myWiFiManager->getConfigPortalSSID()));
+  scrollMessage("Activez le wifi sur votre telephone et connectez-vous au point d'acces suivant pour y entrez votre SSID et votre cle wifi: " + String(myWiFiManager->getConfigPortalSSID()));
   centerPrint("WIFI");
 }
 
