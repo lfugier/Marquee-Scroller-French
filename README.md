@@ -1,9 +1,13 @@
 # Marquee Scroller (Clock, Weather, News, and More)
 
-## NOTE VERSION FR
+# MODIFICATIONS DE LA VERSION FRANCAISE :
+Fork de la version originale ( https://github.com/Qrome/marquee-scroller )
+Version 3.01 Fr
+Ne contient pas de binaires , vous devrez programmer votre Wemos d1 mini avec l'IDE Arduino
+Inclus un zip avec le fichier codes villes OpenWheatherMap
+Inclus un binaire pour reset complet d'un Wemos déjà programmé :
+ Ouvrir ESP-Flasher.exe , charger le binaire reset-wemos-d1-mini.bin ,configurez le port et cliquez sur Falsh Esp.Reprogramme ensuite votre Wemos avec marquee scroller french et l'IDE Arduino
 
-Test d'affichage
-test 2 d'affichage
 
 ## NOTICE
 The latest version of Marquee Scroller 3.01 works with **ESP8266 Core 3.0.2** -- if you are upgrading from Marquee Scroller 2.X version this may require you to enter in all your API Keys and settings.  Always meake sure you have coppied all your API keys somewhere before updating.  The ESP8266 Core 3.0.2 uses the newer FS (file system) that may require a fresh start on the configuration.
