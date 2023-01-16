@@ -1,6 +1,7 @@
 # Marquee Scroller (Clock, Weather, News, and More)
 
 ## NOTE VERSION FR
+
 Test d'affichage
 test 2 d'affichage
 
