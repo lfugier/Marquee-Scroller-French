@@ -886,7 +886,7 @@ void handleDisplay() {
   if (displayOn) {
     state = "ON";
   }
-  displayMessage("Display is now " + state);
+  displayMessage("Affichage sur " + state);
 }
 
 //***********************************************************************
