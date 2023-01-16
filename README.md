@@ -1,0 +1,2 @@
+# Marquee-Scroller-French
+ 
