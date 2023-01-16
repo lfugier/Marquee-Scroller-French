@@ -1,10 +1,10 @@
 # Marquee Scroller (Clock, Weather, News, and More)
 
 # MODIFICATIONS DE LA VERSION FRANCAISE :
-Fork de la version originale ( https://github.com/Qrome/marquee-scroller )
-Version 3.01 Fr
-Ne contient pas de binaires , vous devrez programmer votre Wemos d1 mini avec l'IDE Arduino
-Inclus un zip avec le fichier codes villes OpenWheatherMap
+Fork de la version originale ( https://github.com/Qrome/marquee-scroller ).
+Version 3.01 Fr.
+Ne contient pas de binaires , vous devrez programmer votre Wemos d1 mini avec l'IDE Arduino.
+Inclus un zip avec le fichier codes villes OpenWheatherMap.
 Inclus un binaire pour reset complet d'un Wemos déjà programmé :
  Ouvrir ESP-Flasher.exe , charger le binaire reset-wemos-d1-mini.bin ,configurez le port et cliquez sur Falsh Esp.Reprogramme ensuite votre Wemos avec marquee scroller french et l'IDE Arduino
 
