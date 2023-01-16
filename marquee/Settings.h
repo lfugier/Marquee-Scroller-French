@@ -99,7 +99,7 @@ String timeDisplayTurnsOff = "23:00"; // 24 Hour Format HH:MM -- Leave blank for
 
 // OctoPrint Monitoring -- Monitor your 3D printer OctoPrint Server
 boolean OCTOPRINT_ENABLED = false;
-boolean OCTOPRINT_PROGRESS = true;
+boolean OCTOPRINT_PROGRESS = false;
 String OctoPrintApiKey = "";  // ApiKey from your User Account on OctoPrint
 String OctoPrintServer = "";  // IP or Address of your OctoPrint Server (DO NOT include http://)
 int OctoPrintPort = 80;       // the port you are running your OctoPrint server on (usually 80);
