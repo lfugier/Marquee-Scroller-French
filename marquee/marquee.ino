@@ -174,7 +174,7 @@ static const char PIHOLE_FORM[] PROGMEM = "<form class='w3-container' action='/s
 
 static const char PIHOLE_TEST[] PROGMEM = "<script>function testPiHole(){var e=document.getElementById(\"PiHoleTest\"),t=document.getElementById(\"piholeAddress\").value,"
                        "n=document.getElementById(\"piholePort\").value;"
-                       "if(e.innerHTML=\"\",\"\"==t||\"\"==n)return e.innerHTML=\"* Address and Port are required\","
+                       "if(e.innerHTML=\"\",\"\"==t||\"\"==n)return e.innerHTML=\"* Adresse Ip et port recquis\","
                        "void(e.style.background=\"\");var r=\"http://\"+t+\":\"+n;r+=\"/admin/api.php?summary\",window.open(r,\"_blank\").focus()}</script>";
 
 static const char NEWS_FORM1[] PROGMEM =   "<form class='w3-container' action='/savenews' method='get'><h2>Configuration des actualités:</h2>"
