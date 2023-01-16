@@ -39,7 +39,7 @@ void OpenWeatherMapClient::updateWeatherApiKey(String ApiKey) {
 void OpenWeatherMapClient::updateWeather() {
   WiFiClient weatherClient;
   if (myApiKey == "") {
-    weathers[0].error = "Veuillez fournir une clé API pour la météo.";
+    weathers[0].error = "Veuillez fournir une cle API pour la meteo";
     Serial.println(weathers[0].error);
     return;
   }
