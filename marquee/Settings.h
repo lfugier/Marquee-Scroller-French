@@ -74,9 +74,9 @@ int minutesBetweenScrolling = 1; // Time in minutes between scrolling data (defa
 int displayScrollSpeed = 35; // In milliseconds -- Configurable by the web UI (slow = 35, normal = 25, fast = 15, very fast = 5)
 boolean flashOnSeconds = true; // when true the : character in the time will flash on and off as a seconds indicator
 
-boolean NEWS_ENABLED = true;
+boolean NEWS_ENABLED = false;
 String NEWS_API_KEY = ""; // Get your News API Key from https://newsapi.org
-String NEWS_SOURCE = "reuters";  // https://newsapi.org/sources to get full list of news sources available
+String NEWS_SOURCE = "";  // https://newsapi.org/sources to get full list of news sources available
 
 // Display Settings
 // CLK -> D5 (SCK)  
