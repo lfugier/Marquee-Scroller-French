@@ -144,9 +144,7 @@ static const char CHANGE_FORM1[] PROGMEM = "<form class='w3-container' action='/
                       "<p><input name='showpressure' class='w3-check w3-margin-top' type='checkbox' %PRESSURE_CHECKED%> Afficher la pression barométrique</p>"
                       "<p><input name='is24hour' class='w3-check w3-margin-top' type='checkbox' %IS_24HOUR_CHECKED%> Utiliser l'horloge au format 24 heures</p>";
 
-static const char CHANGE_FORM2[] PROGMEM = "<p><input name='isPM' class='w3-check w3-margin-top' type='checkbox' %IS_PM_CHECKED%> Afficher l'indicateur PM (format 12h uniquement)</p>"
-                      "<p><input name='flashseconds' class='w3-check w3-margin-top' type='checkbox' %FLASHSECONDS%> Flash : dans le temps</p>"
-                      "<p><label>Message personnel à afficher sur l'horloge (jusqu'à 60 caractères)</label><input class='w3-input w3-border w3-margin-bottom' type='text' name='marqueeMsg' value='%MSG%' maxlength='60'></p>"
+static const char CHANGE_FORM2[] PROGMEM = "<p><label>Message personnel à afficher sur l'horloge (jusqu'à 60 caractères)</label><input class='w3-input w3-border w3-margin-bottom' type='text' name='marqueeMsg' value='%MSG%' maxlength='60'></p>"
                       "<p><label>Heure de début </label><input name='startTime' type='time' value='%STARTTIME%'></p>"
                       "<p><label>Heure de fin </label><input name='endTime' type='time' value='%ENDTIME%'></p>"
                       "<p>Display Luminosité Led <input class='w3-border w3-margin-bottom' name='ledintensity' type='number' min='0' max='15' value='%INTENSITYOPTIONS%'></p>"
