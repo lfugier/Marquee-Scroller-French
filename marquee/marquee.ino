@@ -147,10 +147,10 @@ static const char CHANGE_FORM1[] PROGMEM = "<form class='w3-container' action='/
 static const char CHANGE_FORM2[] PROGMEM = "<p><label>Message personnel à afficher sur l'horloge (jusqu'à 60 caractères)</label><input class='w3-input w3-border w3-margin-bottom' type='text' name='marqueeMsg' value='%MSG%' maxlength='60'></p>"
                       "<p><label>Heure de début </label><input name='startTime' type='time' value='%STARTTIME%'></p>"
                       "<p><label>Heure de fin </label><input name='endTime' type='time' value='%ENDTIME%'></p>"
-                      "<p>Display Luminosité Led <input class='w3-border w3-margin-bottom' name='ledintensity' type='number' min='0' max='15' value='%INTENSITYOPTIONS%'></p>"
-                      "<p>Display Vitesse de défilement <select class='w3-option w3-padding' name='scrollspeed'>%SCROLLOPTIONS%</select></p>"
-                      "<p>Minutes Temps d'actualisation des données (en minutes) <select class='w3-option w3-padding' name='refresh'>%OPTIONS%</select></p>"
-                      "<p>Minutes Temps pour faire défiler les données (en minutes) <input class='w3-border w3-margin-bottom' name='refreshDisplay' type='number' min='1' max='10' value='%REFRESH_DISPLAY%'></p>";
+                      "<p>Luminosité Led (Min 1 Max 15) <input class='w3-border w3-margin-bottom' name='ledintensity' type='number' min='0' max='15' value='%INTENSITYOPTIONS%'></p>"
+                      "<p>Vitesse de défilement <select class='w3-option w3-padding' name='scrollspeed'>%SCROLLOPTIONS%</select></p>"
+                      "<p>Temps d'actualisation des données (en minutes) <select class='w3-option w3-padding' name='refresh'>%OPTIONS%</select></p>"
+                      "<p>Temps pour faire défiler les données (en minutes) <input class='w3-border w3-margin-bottom' name='refreshDisplay' type='number' min='1' max='10' value='%REFRESH_DISPLAY%'></p>";
 
 static const char CHANGE_FORM3[] PROGMEM = "<hr><p><input name='isBasicAuth' class='w3-check w3-margin-top' type='checkbox' %IS_BASICAUTH_CHECKED%> Utiliser les informations d'identification de sécurité pour les modifications de configuration</p>"
                       "<p><label>Sélection de l'ID utilisateur (pour cette interface Web)</label><input class='w3-input w3-border w3-margin-bottom' type='text' name='userid' value='%USERID%' maxlength='20'></p>"
