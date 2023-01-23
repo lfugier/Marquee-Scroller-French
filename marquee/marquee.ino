@@ -94,13 +94,13 @@ int newsIndex = 0;
 // Weather Client
 OpenWeatherMapClient weatherClient(APIKEY, CityIDs, 1, IS_METRIC);
 // (some) Default Weather Settings
-boolean SHOW_DATE = false;
+boolean SHOW_DATE = true;
 boolean SHOW_CITY = true;
-boolean SHOW_CONDITION = true;
+boolean SHOW_CONDITION = false;
 boolean SHOW_HUMIDITY = true;
 boolean SHOW_WIND = true;
 boolean SHOW_WINDDIR = true;
-boolean SHOW_PRESSURE = false;
+boolean SHOW_PRESSURE = true;
 boolean SHOW_HIGHLOW = true;
 
 // OctoPrint Client
