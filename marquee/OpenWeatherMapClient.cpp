@@ -39,7 +39,7 @@ void OpenWeatherMapClient::updateWeatherApiKey(String ApiKey) {
 void OpenWeatherMapClient::updateWeather() {
   WiFiClient weatherClient;
   if (myApiKey == "") {
-    weathers[0].error = "Veuillez vous conneccter a l'interface web (tapez l'adresse ip dans un navigateur sans les http) et fournir des cles API pour OpenWheatherMap et Timezone et entrez un identifiant ville";
+    weathers[0].error = "Veuillez vous connecter a l'interface web (tapez l'adresse ip dans un navigateur sans les http) et fournir des cles API pour OpenWheatherMap et Timezone et entrez un identifiant ville";
     Serial.println(weathers[0].error);
     return;
   }
