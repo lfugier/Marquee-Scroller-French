@@ -59,7 +59,7 @@ SOFTWARE.
 String TIMEDBKEY = ""; // Your API Key from https://timezonedb.com/register
 String APIKEY = ""; // Your API Key from http://openweathermap.org/
 // Default City Location (use http://openweathermap.org/find to find city ID)
-int CityIDs[] = { 3014728 }; //Only USE ONE for weather marquee
+int CityIDs[] = {3014728}; //Only USE ONE for weather marquee
 String marqueeMessage = "";
 boolean IS_METRIC = true; // false = Imperial and true = Metric
 boolean IS_24HOUR = true; // 23:00 millitary 24 hour clock
@@ -76,7 +76,7 @@ boolean flashOnSeconds = true; // when true the : character in the time will fla
 
 boolean NEWS_ENABLED = false;
 String NEWS_API_KEY = ""; // Get your News API Key from https://newsapi.org
-String NEWS_SOURCE = "";  // https://newsapi.org/sources to get full list of news sources available
+String NEWS_SOURCE = "google-news-fr";  // https://newsapi.org/sources to get full list of news sources available
 
 // Display Settings
 // CLK -> D5 (SCK)  

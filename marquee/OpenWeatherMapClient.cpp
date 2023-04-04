@@ -57,7 +57,7 @@ void OpenWeatherMapClient::updateWeather() {
     weatherClient.println();
   } 
   else {
-    Serial.println("la connexion aux donnees meteo a echoue"); //error message if no client connect
+    Serial.println("la connexion aux donnees météo a échoué"); //error message if no client connect
     Serial.println();
     weathers[0].error = "la connexion aux donnees meteo a échoue";
     return;
@@ -398,4 +398,5 @@ String OpenWeatherMapClient::getWeatherIcon(int index) {
     default:break; 
   }
   return W;
-}
+  }
+

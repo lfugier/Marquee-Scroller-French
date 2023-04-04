@@ -47,9 +47,9 @@
 
 #include "Settings.h"
 
-#define VERSION "3.01 Fr"
+#define VERSION "1.0"
 
-#define HOSTNAME "HORLOGE-"
+#define HOSTNAME "HLEDMATRIXWIDE-GREEN-"
 #define CONFIG "/conf.txt"
 #define BUZZER_PIN  D2
 
@@ -75,7 +75,7 @@ String message = "Salut";
 int spacer = 1;  // dots between letters
 int width = 5 + spacer; // The font width is 5 pixels + spacer
 Max72xxPanel matrix = Max72xxPanel(pinCS, numberOfHorizontalDisplays, numberOfVerticalDisplays);
-String Wide_Clock_Style = "1";  //1="hh:mm Temp", 2="hh:mm:ss", 3="hh:mm"
+String Wide_Clock_Style = "2";  //1="hh:mm Temp", 2="hh:mm:ss", 3="hh:mm"  // Changer le type d'affichage d'heure ici et le nombre de pave dans settings.h ligne 87
 float UtcOffset;  //time zone offsets that correspond with the CityID above (offset from GMT)
 
 // Time
@@ -95,12 +95,12 @@ int newsIndex = 0;
 OpenWeatherMapClient weatherClient(APIKEY, CityIDs, 1, IS_METRIC);
 // (some) Default Weather Settings
 boolean SHOW_DATE = true;
-boolean SHOW_CITY = true;
+boolean SHOW_CITY = false;
 boolean SHOW_CONDITION = false;
 boolean SHOW_HUMIDITY = true;
 boolean SHOW_WIND = true;
 boolean SHOW_WINDDIR = true;
-boolean SHOW_PRESSURE = true;
+boolean SHOW_PRESSURE = false;
 boolean SHOW_HIGHLOW = true;
 
 // OctoPrint Client
@@ -115,16 +115,15 @@ ESP8266HTTPUpdateServer serverUpdater;
 
 static const char WEB_ACTIONS1[] PROGMEM = "<a class='w3-bar-item w3-button' href='/'><i class='fas fa-home'></i> Accueil</a>"
                         "<a class='w3-bar-item w3-button' href='/configure'><i class='fas fa-cog'></i> Configurer</a>"
-                        "<a class='w3-bar-item w3-button' href='/configurenews'><i class='far fa-newspaper'></i> Informations</a>"
-                        "<a class='w3-bar-item w3-button' href='/configureoctoprint'><i class='fas fa-cube'></i> OctoPrint</a>";
+                        "<a class='w3-bar-item w3-button' href='/configurenews'><i class='far fa-newspaper'></i> Informations</a>";
+                        
 
-static const char WEB_ACTIONS2[] PROGMEM = "<a class='w3-bar-item w3-button' href='/configurepihole'><i class='fas fa-network-wired'></i> Pi-hole</a>"
-                        "<a class='w3-bar-item w3-button' href='/pull'><i class='fas fa-cloud-download-alt'></i> Rafraîchir</a>"
+static const char WEB_ACTIONS2[] PROGMEM = "<a class='w3-bar-item w3-button' href='/pull'><i class='fas fa-cloud-download-alt'></i> Rafraîchir</a>"
                         "<a class='w3-bar-item w3-button' href='/display'>";
 
 static const char WEB_ACTION3[] PROGMEM = "</a><a class='w3-bar-item w3-button' href='/systemreset' onclick='return confirm(\"Voulez-vous remettre par defaut les paramêtres météo?\")'><i class='fas fa-undo'></i> Réinitialiser</a>"
                        "<a class='w3-bar-item w3-button' href='/forgetwifi' onclick='return confirm(\"Voulez-vous réinitialiser la connexion WiFi?\")'><i class='fas fa-wifi'></i> Oublier WiFi</a>"
-                       "<a class='w3-bar-item w3-button' href='/update'><i class='fas fa-wrench'></i> MAJ du logiciel</a>"
+                       //"<a class='w3-bar-item w3-button' href='/update'><i class='fas fa-wrench'></i> MAJ du logiciel</a>"
                        "<a class='w3-bar-item w3-button' href='https://github.com/lfugier/Marquee-Scroller-French' target='_blank'><i class='fas fa-question-circle'></i> A Propos</a>";
 
 static const char CHANGE_FORM1[] PROGMEM = "<form class='w3-container' action='/locations' method='get'><h2>Configurer:</h2>"
@@ -976,7 +975,7 @@ void redirectHome() {
 
 void sendHeader() {
   String html = "<!DOCTYPE HTML>";
-  html += "<html><head><title>Marquee Scroller</title><link rel='icon' href='data:;base64,='>";
+  html += "<html><head><title>Horloge Led Matrix</title><link rel='icon' href='data:;base64,='>";
   html += "<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />";
   html += "<meta name='viewport' content='width=device-width, initial-scale=1'>";
   html += "<link rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css'>";
@@ -1005,7 +1004,7 @@ void sendHeader() {
   server.sendContent(FPSTR(WEB_ACTION3));
 
   html = "</nav>";
-  html += "<header class='w3-top w3-bar w3-theme'><button class='w3-bar-item w3-button w3-xxxlarge w3-hover-theme' onclick='openSidebar()'><i class='fas fa-bars'></i></button><h2 class='w3-bar-item'>Horloge Led</h2></header>";
+  html += "<header class='w3-top w3-bar w3-theme'><button class='w3-bar-item w3-button w3-xxxlarge w3-hover-theme' onclick='openSidebar()'><i class='fas fa-bars'></i></button><h2 class='w3-bar-item'>Horloge Led Matrix</h2></header>";
   html += "<script>";
   html += "function openSidebar(){document.getElementById('mySidebar').style.display='block'}function closeSidebar(){document.getElementById('mySidebar').style.display='none'}closeSidebar();";
   html += "</script>";
@@ -1021,7 +1020,7 @@ void sendFooter() {
   String html = "<br><br><br>";
   html += "</div>";
   html += "<footer class='w3-container w3-bottom w3-theme w3-margin-top'>";
-  html += "<i class='far fa-paper-plane'></i> Traduction française par Laurent Fugier | Version: " + String(VERSION) +  "<br>";
+  html += "<i class='far fa-paper-plane'></i> Code par Laurent Fugier | Version: " + String(VERSION) +  "<br>";
   html += "<i class='far fa-clock'></i> Prochaine mise à jour: " + getTimeTillUpdate() + "<br>";
   html += "<i class='fas fa-rss'></i> Force du signal: ";
   html += String(rssi) + "%";
@@ -1077,7 +1076,7 @@ void displayWeatherData() {
     html += temperature + " " + getTempSymbol(true) + "<br>";
     html += weatherClient.getHigh(0) + "/" + weatherClient.getLow(0) + " " + getTempSymbol(true) + "<br>";
     html += time + "<br>";
-    html += "<a href='https://www.google.com/maps/@" + weatherClient.getLat(0) + "," + weatherClient.getLon(0) + ",10000m/data=!3m1!1e3' target='_BLANK'><i class='fas fa-map-marker' style='color:red'></i> Map It!</a><br>";
+    html += "<a href='https://www.google.com/maps/@" + weatherClient.getLat(0) + "," + weatherClient.getLon(0) + ",10000m/data=!3m1!1e3' target='_BLANK'><i class='fas fa-map-marker' style='color:red'></i> Voir sur une carte!</a><br>";
     html += "</p></div></div><hr>";
   }
 
@@ -1160,7 +1159,7 @@ void configModeCallback (WiFiManager *myWiFiManager) {
   Serial.println("Entrée en Mode de configuration");
   Serial.println(WiFi.softAPIP());
   Serial.println("Gestionnaire Wi-Fi");
-  Serial.println("Veuillez vous connecter point d'accès");
+  Serial.println("Veuillez vous connecter au point d'accès");
   Serial.println(myWiFiManager->getConfigPortalSSID());
   Serial.println("Pour configurer votre horloge");
   scrollMessage("Activez le wifi sur votre telephone et connectez-vous au point d'acces suivant pour y entrez votre SSID et votre cle wifi: " + String(myWiFiManager->getConfigPortalSSID()));
