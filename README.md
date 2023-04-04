@@ -1,13 +1,13 @@
 # Marquee Scroller (Clock, Weather, News, and More)
 
 # MODIFICATIONS DE LA VERSION FRANCAISE :
-Fork de la version originale ( https://github.com/Qrome/marquee-scroller ).
-Version 3.01 Fr.
+Fork de la version originale ( https://github.com/Qrome/marquee-scroller ) version 3.01.
+Première version de mon fork nommé Hled Matrix en version 1.0 , prends en charge l'heure ,la méteo Openwheathermap et les titres de news .
 Ne contient pas de binaires , vous devrez programmer votre Wemos d1 mini avec l'IDE Arduino.
-Inclus un zip avec le fichier codes villes OpenWheatherMap.
+Inclus un zip avec le fichier codes villes OpenWheatherMap pour trouver le code de votre ville.
 Inclus un binaire pour reset complet d'un Wemos déjà programmé :
  Ouvrir ESP-Flasher.exe , charger le binaire reset-wemos-d1-mini.bin ,configurez le port et cliquez sur Falsh Esp.Reprogramme ensuite votre Wemos avec marquee scroller french et l'IDE Arduino
-
+Bugs connu : ne gère pas les accents.
 
 ## NOTICE
 The latest version of Marquee Scroller 3.01 works with **ESP8266 Core 3.0.2** -- if you are upgrading from Marquee Scroller 2.X version this may require you to enter in all your API Keys and settings.  Always meake sure you have coppied all your API keys somewhere before updating.  The ESP8266 Core 3.0.2 uses the newer FS (file system) that may require a fresh start on the configuration.
