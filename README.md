@@ -4,7 +4,7 @@
 Fork de la version originale ( https://github.com/Qrome/marquee-scroller ) version 3.01.
 Première version de mon fork nommé Hled Matrix en version 1.0 , prends en charge l'heure ,la méteo Openwheathermap et les titres de news .
 Ne contient pas de binaires , vous devrez programmer votre Wemos d1 mini avec l'IDE Arduino.
-Inclus un zip avec le fichier codes villes OpenWheatherMap pour trouver le code de votre ville.
+Inclus un zip avec le fichier codes villes OpenWheatherMap pour trouver le code de votre ville (par defaut réglé sur Grenoble).
 Inclus un binaire pour reset complet d'un Wemos déjà programmé :
  Ouvrir ESP-Flasher.exe , charger le binaire reset-wemos-d1-mini.bin ,configurez le port et cliquez sur Falsh Esp.Reprogramme ensuite votre Wemos avec marquee scroller french et l'IDE Arduino
 Bugs connu : ne gère pas les accents.
